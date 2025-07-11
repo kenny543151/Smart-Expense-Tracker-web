@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://apis.google.com https://www.gstatic.com https://api.emailjs.com;
+        connect-src 'self'
+          https://*.firebaseio.com
+          https://*.cloudfunctions.net
+          https://identitytoolkit.googleapis.com
+          https://firestore.googleapis.com
+          https://securetoken.googleapis.com
+          https://firebaseinstallations.googleapis.com
+          https://fcm.googleapis.com
+          https://fcmregistrations.googleapis.com
+          https://api.emailjs.com
+          ws://localhost:5174;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self';
+      "
+    />
+    <title>Smart Expense Tracker</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
